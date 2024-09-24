@@ -32,11 +32,11 @@ def lab2Question3(str1, str2):
     # Return the number of times str2 appears in str1
     # For example if str1 = "coding is cool" and str2 = "co" then output should be 2.
     
-    str1 = str[]
-    str2 = str[]
+    str1 = str()
+    str2 - str()
 
     strcount = str1.count(str2)
-
+    
     return strcount
 
 
@@ -73,13 +73,15 @@ def lab2Question5():
     password = input("Enter password")
     isValidPassword(password)
 
-    if isValidPassword(password) != True:
-        password = input("Re-enter password")
-        isValidPassword(password)
+    while True:
+        if isValidPassword(password) == False:
+            password = input("Re-enter password")
+            isValidPassword(password)
 
+        else:
+            break
+            return password
 
-
-    return password
 
 def isValidPassword(password):
     # Create a function that takes in a password and returns True if the password is valid, False otherwise
@@ -88,31 +90,23 @@ def isValidPassword(password):
     # - Contains at least one lowercase letter
     # - Contains at least one number
     
-    password = []
-
-    if len(password) >= 8:      
-        True
-    else:        
-        False
+    password = ()
+    
+    if len(password) < 8:
+        length = False
         print("Must be at least 8 characters")
-
-    if any(char.isupper() for char in password):
-        True
-    else:
-        False
+            
+    if not any(char.isupper() for char in password):
         print("Must contain at least 1 upper case letter")
-               
-    if any(char.islower() for char in password):
-        True
-    else:
-        False
+        upper = False
+            
+    if not any(char.islower() for char in password):
         print("Must contain at least 1 lower case letter")
-                
-    if any(char.isdigit() for char in password):
-        True
-    else:
-        False
+        lower = False
+            
+    if not any(char.isdigit() for char in password):
         print("Must contain at least 1 number")
+        digit = False
 
-    return
-
+    if length or upper or lower or digit == False:
+        print("False")
