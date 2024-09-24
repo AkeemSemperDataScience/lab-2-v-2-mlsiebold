@@ -33,7 +33,7 @@ def lab2Question3(str1, str2):
     # For example if str1 = "coding is cool" and str2 = "co" then output should be 2.
     
     str1 = str()
-    str2 - str()
+    str2 = str()
 
     strcount = str1.count(str2)
     
